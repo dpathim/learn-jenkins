@@ -12,4 +12,13 @@ pipeline {
         }
 
     }
+    post {
+       always {
+          echo 'Post'
+          //Send Email
+          // Trigger Some other Job
+          // Update some JIRA Status about the build.
+
+       }
+    }
 }
