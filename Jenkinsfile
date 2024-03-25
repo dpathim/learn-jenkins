@@ -57,3 +57,12 @@ pipeline {
        }
     }
 }
+
+node('workstation1') {
+  def x = 10
+  env.y = 20
+  stage('Test') {
+     print x
+     sh 'echo y - ${y}'
+  }
+}
