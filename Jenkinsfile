@@ -28,10 +28,14 @@ pipeline {
 
     stages {
         stage('compile') {
-           input {
-             message "Should we continue?"
-             ok "Yes, we should."
-        }
+           //input {
+             //message "Should we continue?"
+             //ok "Yes, we should."
+       // }
+
+        when {
+          branch 'production'
+           }
             steps {
                 //echo 'Hello World'
                 //error 'This is an error'
