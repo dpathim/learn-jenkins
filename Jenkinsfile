@@ -61,8 +61,13 @@ pipeline {
 node('workstation1') {
   def x = 10
   env.y = 20
+
+  def samplef() {
+     print "XYZ FUNCTION"
+     }
   stage('Test') {
      print x
      sh 'echo y - ${y}'
+     samplef
   }
 }
